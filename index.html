@@ -6,7 +6,9 @@
 
   <title>3DRenderJs</title>
   <meta name="description" content="A (very) basic Javascript 3D Render">
-  <meta name="author" content="GNeulaender">
+  <meta name="author" content="GNeulaender, RiqueriSkate10">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css?v=1.0">
   <script src="js/math.js" type="text/javascript"></script>
 
@@ -18,10 +20,18 @@
   <canvas id="3dRender" width="800" height="800"></canvas>
   
   <div class="div-buttons-movement">
-    <button name="up" class="button" onclick="move('up')">▲</button>
-    <button name="rigth" class="button" onclick="move('right')">▶</button>
-    <button name="left" class="button" onclick="move('left')">◀</button>
-    <button name="down" class="button" onclick="move('down')">▼</button>
+    <button name="up" class="button" onclick="move('up')">
+      <span class="material-icons md-48">keyboard_arrow_up</span>
+    </button>
+    <button name="rigth" class="button" onclick="move('right')">
+      <span class="material-icons md-48">keyboard_arrow_right</span>
+    </button>
+    <button name="left" class="button" onclick="move('left')">
+      <span class="material-icons md-48">keyboard_arrow_left</span>
+    </button>
+    <button name="down" class="button" onclick="move('down')">
+      <span class="material-icons md-48">keyboard_arrow_down</span>
+    </button>
   </div>
   <div>
     
