@@ -18,12 +18,17 @@
   <script src="js/index.js"></script>
   <h1>3DRenderJs</h1>
   <canvas id="3dRender" width="800" height="800"></canvas>
-  
+  <div class="switch_buttons">
+    <button class="switcher" onclick="switch_to_rotate()">Rotate</button>
+  </div>
+
+  <p class="info_text">Move</p>
+
   <div class="div-buttons-movement">
     <button name="up" class="button" onclick="move('up')">
       <span class="material-icons md-48">keyboard_arrow_up</span>
     </button>
-    <button name="rigth" class="button" onclick="move('right')">
+    <button name="right" class="button" onclick="move('right')">
       <span class="material-icons md-48">keyboard_arrow_right</span>
     </button>
     <button name="left" class="button" onclick="move('left')">

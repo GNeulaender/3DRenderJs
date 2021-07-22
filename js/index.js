@@ -124,8 +124,8 @@ function init () {
 	cube = new Cube([100, -100, -100], 200)
 	cube.draw(camera, ctx, canvas.clientWidth, canvas.clientHeight)
 
-	buttons = document.querySelectorAll('button')
-	canvas_div = document.querySelectorAll('div')
+	buttons = document.querySelectorAll('.button')
+	canvas_div = document.querySelectorAll('.div-buttons-movement')
 	div_movement = canvas_div[0]
 	div_movement.onmouseover = show_buttons
 	div_movement.onmouseleave = hide_buttons
@@ -140,6 +140,8 @@ function show_buttons(){
 	)
 }
 
+
+
 function hide_buttons(){
 	buttons.forEach(
 		function(value){
@@ -147,6 +149,34 @@ function hide_buttons(){
 		}
 	)
 }
+
+function switch_to_rotate(){
+	const button_text = document.querySelector('.switcher')
+	let info_text = document.querySelector('.info_text')
+	info_text.innerHTML = button_text.innerHTML
+	let button_up = document.getElementsByName('up')[0]
+	let button_left = document.getElementsByName('left')[0]
+	let button_right = document.getElementsByName('right')[0]
+	let button_down = document.getElementsByName('down')[0]
+	console.log(button_up, button_text)
+	switch(button_text.innerHTML){
+		case "Rotate":
+			button_up.setAttribute('onclick', "rotate('y-')")
+			button_left.setAttribute('onclick', "rotate('z+')")
+			button_right.setAttribute('onclick', "rotate('z-')")
+			button_down.setAttribute('onclick', "rotate('y+')")
+			button_text.innerHTML = 'Move'
+			break
+		case "Move":
+			button_up.setAttribute('onclick', "move('up')")
+			button_left.setAttribute('onclick', "move('left')")
+			button_right.setAttribute('onclick', "move('right')")
+			button_down.setAttribute('onclick', "move('down')")
+			button_text.innerHTML = 'Rotate'
+			break
+	}
+}
+
 function update() {
 	ctx.clearRect(0, 0, canvas.clientWidth, canvas.clientHeight)
 	cube.draw(camera, ctx, canvas.clientWidth, canvas.clientHeight)

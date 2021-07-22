@@ -41,6 +41,34 @@ canvas {
   bottom: 816px;
 }
 
+.info_text{
+  font-size: 30pt;
+  margin: auto;
+  position: absolute;
+  left: 48%;
+  top: 10px;
+}
+
+.switch_buttons{
+  position: absolute;
+  top: 150px;
+}
+
+.switch_buttons button{
+  width: 200px;
+  height: 50%;
+  font-size: 15pt;
+  display: flex;
+  justify-content: center;
+  background-color: transparent;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+.switch_buttons button:hover{
+  background-color: #cccccc;
+  color: #000000;
+}
 
 .button{
   /*font-family: arrow;*/
